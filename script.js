@@ -22,11 +22,14 @@ function mostrarSiguienteTabla() {
     tablas[indiceTablaActual].classList.remove("fade-out");
 
     // Obtener el índice de la siguiente tabla
-    indiceTablaActual = (indiceTablaActual + 1) % tablas.length;
+    indiceTablaActual = (indiceTablaActual + 1) % (tablas.length + 1);
 
-    if (indiceTablaActual === 0) {
-      // Si hemos mostrado la última tabla, esperar 10 minutos antes de reiniciar
-      setTimeout(mostrarSiguienteTabla, 10 * 60 * 1000);
+    if (indiceTablaActual === tablas.length) {
+      // Si hemos mostrado todas las tablas, esperar 30 minutos antes de reiniciar
+      setTimeout(() => {
+        indiceTablaActual = 0;
+        mostrarSiguienteTabla();
+      }, 30 * 60 * 1000);
     } else {
       // Mostrar la siguiente tabla con efecto de fade in
       tablas[indiceTablaActual].style.display = "block";
@@ -34,6 +37,9 @@ function mostrarSiguienteTabla() {
       setTimeout(() => {
         tablas[indiceTablaActual].classList.remove("fade-in");
       }, 1000);
+
+      // Mostrar las tablas en intervalos de tiempo de 30 segundos
+      setTimeout(mostrarSiguienteTabla, 30 * 1000);
     }
   }, 1000); // Duración del efecto de fade out
 }
@@ -45,5 +51,5 @@ setTimeout(() => {
   tablas[indiceTablaActual].classList.remove("fade-in");
 }, 1000);
 
-// Mostrar las tablas en intervalos de tiempo de 30 segundos
-setInterval(mostrarSiguienteTabla, 30 * 1000);
+// Iniciar la secuencia de tablas
+setTimeout(mostrarSiguienteTabla, 30 * 1000);
