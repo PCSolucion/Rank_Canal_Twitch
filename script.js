@@ -21,12 +21,17 @@ function mostrarSiguienteTabla() {
   // Obtener el índice de la siguiente tabla
   indiceTablaActual = (indiceTablaActual + 1) % tablas.length;
   
-  // Mostrar la siguiente tabla
-  tablas[indiceTablaActual].style.display = "block";
+  if (indiceTablaActual === 0) {
+    // Si hemos mostrado la última tabla, esperar 10 minutos antes de reiniciar
+    setTimeout(mostrarSiguienteTabla, 10 * 60 * 1000);
+  } else {
+    // Mostrar la siguiente tabla
+    tablas[indiceTablaActual].style.display = "block";
+  }
 }
 
 // Mostrar la primera tabla
 tablas[indiceTablaActual].style.display = "block";
 
-// Mostrar las tablas en intervalos de tiempo de 2 minutos (120 segundos)
-setInterval(mostrarSiguienteTabla, 120000);
+// Mostrar las tablas en intervalos de tiempo de 30 segundos
+setInterval(mostrarSiguienteTabla, 30 * 1000);
