@@ -118,7 +118,7 @@ header {
 }
 
 .leaderboard__name {
-  color: white;
+  color: #ffffffd8;
   font-weight: 600;
   font-size: 29px;
   letter-spacing: 0.64px;
@@ -126,7 +126,7 @@ header {
 }
 
 .leaderboard__value {
-  color: #32b78a;
+  color: #FF4956;
   font-weight: 700;
   font-size: 29px;
   text-align: right;
