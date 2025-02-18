@@ -1,42 +1,32 @@
-body{
+body {
   font-family: 'League Spartan', sans-serif !important;
   background-color: #00000000;
+  margin: 0;
+  background-color: #eaeaea;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: "Source Sans Pro", sans-serif;
 }
-header{
+
+header {
   background: url(https://res.cloudinary.com/pcsolucion/image/upload/v1677139072/named_bg_3.webp) !important;
   background-repeat: round !important;
   background-color: #4f0d4b00 !important;
 }
-#genesis, .leaderboardG{
+
+#genesis, .leaderboardG {
   min-width: 490px;
 }
 
-.clasemut{
-  margin: 12px;
-  width: 105px;
-  height: auto;
-}
-.clasemut1{
+.clasemut1, .clasemut2, .clasemut3 {
   margin-left: 7px;
   margin-top: 16px;
   width: 105px;
   height: auto;
   opacity: 0.8;
 }
-.clasemut2{
-  margin-left: 7px;
-  margin-top: 16px;
-  width: 105px;
-  height: auto;
-  opacity: 0.8;
-}
-.clasemut3{
-  margin-left: 7px;
-  margin-top: 16px;
-  width: 105px;
-  height: auto;
-  opacity: 0.8;
-}
+
 .transicion-tabla {
   transition: opacity 0.5s ease-in-out; /* Define una transición de opacidad de 0.5 segundos */
 }
@@ -45,7 +35,9 @@ header{
   max-width: 490px;
   width: 100%;
   border-radius: 1px;
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
 }
+
 .leaderboardG header {
   --start: 15%;
   height: 130px;
@@ -56,6 +48,7 @@ header{
   overflow: hidden;
   border-bottom: 1px solid #8a7234;
 }
+
 .leaderboardG header .leaderboard__title {
   position: absolute;
   z-index: 2;
@@ -65,9 +58,11 @@ header{
   text-transform: capitalize;
   margin: 0;
 }
+
 .leaderboardG header .leaderboard__title span {
   display: block;
 }
+
 .leaderboardG header .leaderboard__title--top {
   font-size: 37px;
   margin-top: 22px;
@@ -76,6 +71,7 @@ header{
   margin-left: -240px;
   opacity: 0.8;
 }
+
 .leaderboardG header .leaderboard__title--bottom {
   font-size: 25px;
   font-weight: 500;
@@ -83,21 +79,13 @@ header{
   opacity: 0.65;
   transform: translateY(-2px);
 }
+
 .leaderboard__title--bottom {
-color:rgb(247 162 45);
+  color: rgb(247 162 45);
   font-weight: 600 !important;
   filter: brightness(1.25) !important;
 }
 
-.leaderboardG header .leaderboard__icon {
-  fill: #fff;
-  opacity: 0.35;
-  width: 50px;
-  position: absolute;
-  top: 50%;
-  left: var(--start);
-  transform: translate(-50%, -50%);
-}
 .leaderboard__profiles {
   background-color: #000;
   border-radius: 0 0 2px 2px;
@@ -105,6 +93,7 @@ color:rgb(247 162 45);
   display: grid;
   row-gap: 8px;
 }
+
 .leaderboard__profile {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -115,16 +104,19 @@ color:rgb(247 162 45);
   transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
   background-color: #080808;
 }
+
 .leaderboard__profile:hover {
   transform: scale(1.2);
   box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
 }
+
 .leaderboard__picture {
   max-width: 100%;
   width: 53px;
   border-radius: 50%;
   box-shadow: rgb(26 20 18) 0px 0px 0px 10px, rgb(0 0 0) 0px 0px 0px 22px;
 }
+
 .leaderboard__name {
   color: white;
   font-weight: 600;
@@ -132,28 +124,17 @@ color:rgb(247 162 45);
   letter-spacing: 0.64px;
   margin-left: 10px;
 }
+
 .leaderboard__value {
   color: #32b78a;
   font-weight: 700;
   font-size: 29px;
   text-align: right;
 }
+
 .leaderboard__value > span {
   opacity: 0.8;
   font-weight: 600;
   font-size: 13px;
   margin-left: 3px;
-}
-
-body {
-  margin: 0;
-  background-color: #eaeaea;
-  display: grid;
-  height: 100vh;
-  place-items: center;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.leaderboardG {
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
 }
